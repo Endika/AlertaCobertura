@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/menu_configurar"
+        android:title="@string/menu_opcion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_about"
+        android:title="@string/menu_about"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_history"
+        android:title="@string/menu_history"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_cerrar"
+        android:title="@string/menu_cerrar"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <!--    <item android:id="@+id/menu_vaciar"
+              android:title="@string/menu_vaciar"
+              android:orderInCategory="100"
+              android:showAsAction="never"/>
+        <item android:id="@+id/menu_refres"
+              android:title="@string/menu_refres"
+              android:orderInCategory="100"
+              android:showAsAction="never"/>-->
+</menu>

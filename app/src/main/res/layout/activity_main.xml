@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E6E6E6"
+    android:gravity="center|top"
+    android:orientation="vertical">
+<!--
+    <fragment android:name="com.endikaiglesias.alertacobertura.MainActivity$PlaceholderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adFragment" />
+-->
+
+    <TextView
+        android:id="@id/Titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:background="#424242"
+        android:gravity="center"
+        android:text="@string/titulo"
+        android:textSize="25sp"
+        android:textColor="#FFF" />
+
+    <ImageView
+        android:id="@id/lineabar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nada"
+        android:scaleType="fitXY"
+        android:src="@drawable/linea" />
+
+    <ImageView
+        android:id="@id/viewstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nada"
+        android:paddingTop="20dp"
+        android:src="@drawable/ic_launcher_off" />
+
+
+    <TextView
+        android:id="@id/estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E6E6E6"
+        android:text="@string/none"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+
+    <fragment
+        android:id="@+id/adFragment"
+        android:name="com.endikaiglesias.alertacobertura.MainActivity$AdFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</LinearLayout>

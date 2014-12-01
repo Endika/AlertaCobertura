@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3311966089935605/3105833440</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Warning Signal</string>
+    <string name="titulo">The phone has a signal?</string>
+    <string name="menu_cerrar">Close all</string>
+    <string name="menu_opcion">Settings</string>
+    <string name="title_activity_main">Warning Signal</string>
+    <string name="noCobertura">No :\'(</string>
+    <string name="none">&#8230;</string>
+    <string name="nada"/>
+    <string name="AlertNoCobertura">NO SIGNAL :\'(</string>
+    <string name="AlertSiCobertura">Have signal ;)</string>
+    <string name="siCobertura">Yes ;)</string>
+    <string name="noServicio">Unable to start the service</string>
+    <string name="noSonido">You are not set notification sound</string>
+    <string name="descripcion">From now be notified every time you lose or recover your phone signal. If you want to stop the service click the option to "close all" from the menu.</string>
+    <string name="menu_vaciar">Remove log</string>
+    <string name="menu_about">About software</string>
+    <string name="menu_history">View log</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_about">About software</string>
+    <string name="title_activity_history">Signal log</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_refres">List refres</string>
+    <string name="ListaRefres">List update</string>
+    <string name="ConfiguraTitle">Settings</string>
+    <string name="ConfiguraTosta">Pop</string>
+    <string name="ConfiguraVibrar">Vibration</string>
+    <string name="ConfiguraSonido">Sound</string>
+    <string name="ConfiguraBarra">Bar notification</string>
+    <string name="ConfiguraLabelTipo">Select the notification sound</string>
+    <string name="ConfiguraLabelTipo2">Alert volume</string>
+    <string name="comunicado">Signal</string>
+    <string name="incomunicado">No signal</string>
+    <string name="ConfigurarBoot">Run at boot</string>
+    <string name="textoConfiguracionTemporizador">Repeat alert every (seg)</string>
+</resources>

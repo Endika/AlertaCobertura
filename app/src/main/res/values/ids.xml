@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Titulo" type="id"/>
+    <item name="lineabar" type="id"/>
+    <item name="cBoot" type="id"/>
+    <item name="cSonido" type="id"/>
+    <item name="cVibrar" type="id"/>
+    <item name="cBarra" type="id"/>
+    <item name="cTosta" type="id"/>
+    <item name="viewstate" type="id"/>
+    <item name="estado" type="id"/>
+    <item name="lista" type="id"/>
+    <item name="adView" type="id"/>
+    <item name="cTipoSonido" type="id"/>
+    <item name="cLabelTipo" type="id"/>
+    <item name="cLabelTipo2" type="id"/>
+    <item name="lytMain" type="id"/>
+    <item name="bVolumen" type="id"/>
+    <item name="temporizador" type="id"/>
+    <item name="textoTemporizador" type="id"/>
+</resources>

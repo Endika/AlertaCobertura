@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:background="#E6E6E6" >
+
+    <TextView
+        android:id="@id/Titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:background="#424242"
+        android:gravity="center"
+        android:text="@string/title_activity_history"
+        android:textSize="25sp"
+        android:textColor="#FFF" />
+
+    <ImageView
+        android:id="@id/lineabar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/nada"
+        android:scaleType="fitXY"
+        android:src="@drawable/linea" />
+
+    <ListView
+        android:id="@id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textSize="10sp"
+        tools:ignore="SmallSp">
+
+    </ListView>
+
+</LinearLayout>
