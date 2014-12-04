@@ -28,7 +28,6 @@ public class Boot extends BroadcastReceiver {
                     if("1".equals(c.getString(1))){
                         Intent servicio = new Intent(context, Servicio.class);
                         context.startService(servicio);
-                        // if(startService(servicio) == null) tosta(getString(R.string.noServicio));
                     }
                 }
             } while(c.moveToNext());

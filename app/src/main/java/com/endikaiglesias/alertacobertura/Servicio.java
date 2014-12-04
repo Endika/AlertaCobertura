@@ -1,4 +1,5 @@
 package com.endikaiglesias.alertacobertura;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -19,8 +20,6 @@ import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.TimerTask;
-import java.util.Timer;
 import static android.widget.Toast.*;
 
 /**
@@ -60,7 +59,6 @@ public class Servicio extends Service{
         this.iniciarServicio();
         //Log.i(getClass().getSimpleName(), "Servicio iniciado");
     }
-
 
     public void onDestroy(){
         super.onDestroy();
@@ -129,27 +127,30 @@ public class Servicio extends Service{
             if(texto.equals(getString(R.string.AlertNoCobertura)))icono = R.drawable.ic_launcher_off;
             CharSequence textoEstado = "Alerta Cobertura!";
             long hora = System.currentTimeMillis();
-
-            Notification notif = new Notification(icono, textoEstado, hora);
+            Context contexto = getApplicationContext();
 
             //Configuramos el Intent
-            Context contexto = getApplicationContext();
             CharSequence descripcion = "Alerta Cobertura!";
             Intent notIntent = new Intent(contexto,Service.class);
             assert contexto != null;
             PendingIntent contIntent = PendingIntent.getActivity(contexto, 0, notIntent, 0);
-            notif.setLatestEventInfo(contexto, texto, descripcion, contIntent);
+            Notification noti = new Notification.Builder(contexto)
+                    .setContentTitle(descripcion)
+                    .setContentText(texto)
+                    .setSmallIcon(icono)
+                    .setContentIntent(contIntent)
+                    .build();
 
             //AutoCancel: cuando se pulsa la notificai\u00f3n \u00e9sta desaparece
-            notif.flags |= Notification.FLAG_AUTO_CANCEL;
+            noti.flags |= Notification.FLAG_AUTO_CANCEL;
 
-            //A\u00f1adir sonido, vibraci\u00f3n y luces
+            //Añadir sonido, vibración y luces
             //notif.defaults |= Notification.DEFAULT_SOUND;
-            if(valueOpcion("vibrar")) notif.defaults |= Notification.DEFAULT_VIBRATE;
+            if(valueOpcion("vibrar")) noti.defaults |= Notification.DEFAULT_VIBRATE;
             //notif.defaults |= Notification.DEFAULT_LIGHTS;
 
-            //Enviar notificaci\u00f3n
-            notManager.notify(1, notif);
+            //Enviar notificación
+            notManager.notify(1, noti);
         }
     }
 
@@ -216,11 +217,19 @@ public class Servicio extends Service{
         SQLiteDatabase db = usdbh.getWritableDatabase();
         String[] campos = new String[] {"estado", "fecha"};
         assert db != null;
-        Cursor c = db.query("historial", campos, null, null, null, null,null,null);
+        Cursor c = null;
         String estado=null;
 
-        if (c.moveToLast()){
-            estado=c.getString(0);
+        try {
+            c = db.query("historial", campos, null, null, null, null,null,null);
+            if (c.moveToLast()){
+                estado=c.getString(0);
+            }
+
+        } finally {
+            // this gets called even if there is an exception somewhere above
+            if(c != null)
+                c.close();
         }
 
         if(estado != null && estado.equals("conCobertura"))return 1;
@@ -246,7 +255,7 @@ public class Servicio extends Service{
         assert db != null;
         Cursor c = db.query("opciones", campos, null, null, null, null,null,null);
         if (c.moveToFirst()) {
-            //Recorremos el cursor hasta que no haya m\u00e1s registros
+            //Recorremos el cursor hasta que no haya más registros
             do {
                 if(opcion.equals(c.getString(0))){
                     return "1".equals(c.getString(1));
@@ -263,7 +272,7 @@ public class Servicio extends Service{
         assert db != null;
         Cursor c = db.query("opciones", campos, null, null, null, null,null,null);
         if (c.moveToFirst()) {
-            //Recorremos el cursor hasta que no haya m\u00e1s registros
+            //Recorremos el cursor hasta que no haya más registros
             do {
                 if(opcion.equals(c.getString(0))){
                     return c.getInt(1);

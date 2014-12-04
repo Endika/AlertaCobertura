@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="banner_ad_unit_id">ca-app-pub-3311966089935605/3105833440</string>
+    <string name="action_settings">Configurar</string>
+    <string name="app_name">Alerta cobertura</string>
+    <string name="titulo">¿Tienes cobertura?</string>
+    <string name="menu_cerrar">Cerrar todo</string>
+    <string name="menu_opcion">Configurar</string>
+    <string name="title_activity_main">Alerta cobertura</string>
+    <string name="noCobertura">No :\'(</string>
+    <string name="none">&#8230;</string>
+    <string name="nada"/>
+    <string name="AlertNoCobertura">NO HAY COBERTURA :\'(</string>
+    <string name="AlertSiCobertura">Si hay cobertura ;)</string>
+    <string name="siCobertura">Si ;)</string>
+    <string name="noServicio">No se ha podido arrancar el servicio</string>
+    <string name="noSonido">No tienes sonido de notificacion configurado</string>
+    <string name="descripcion">A partir de ahora se te notificará cada vez que pierdas o recuperes tu cobertura en el móvil. Si quieres parar el servicio pulsa la opción de cerrar en el menú.</string>
+    <string name="menu_vaciar">Vaciar historial</string>
+    <string name="menu_about">Sobre la aplicación</string>
+    <string name="menu_history">Ver historial</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_about">Sobre la aplicación</string>
+    <string name="title_activity_history">Historial de cobertura</string>
+    <string name="menu_home">Principal</string>
+    <string name="menu_refres">Actualizar lista</string>
+    <string name="ListaRefres">Lista actualizada</string>
+    <string name="ConfiguraTitle">Configuración</string>
+    <string name="ConfiguraTosta">Mensaje emergente</string>
+    <string name="ConfiguraVibrar">Vibración</string>
+    <string name="ConfiguraSonido">Sonido</string>
+    <string name="ConfiguraBarra">Notificación en barra</string>
+    <string name="ConfiguraLabelTipo">Seleccione el sonido de notificación</string>
+    <string name="ConfiguraLabelTipo2">Volumen de alerta</string>
+    <string name="comunicado">Comunicado</string>
+    <string name="incomunicado">Incomunicado</string>
+    <string name="ConfigurarBoot">Ejecutar al inicio</string>
+    <string name="textoConfiguracionTemporizador">Repetir alerta perdida cobertura cada (segundos)</string>
+</resources>
