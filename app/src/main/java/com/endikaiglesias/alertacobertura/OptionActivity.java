@@ -99,6 +99,8 @@ public class OptionActivity extends Activity {
             aux++;
         } while(c.moveToNext());
 
+        if(c != null)c.close();
+
         if(aux == 8)iniciar=false;
 
         if(iniciar){//iniciamos los valores por defecto
@@ -289,6 +291,8 @@ public class OptionActivity extends Activity {
                 }
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
+
         return true;}
 
     String valueOpcionString(String opcion){
@@ -305,6 +309,8 @@ public class OptionActivity extends Activity {
                 }
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
+
         return "";}
 
     int valueOpcionInt(String opcion){
@@ -321,5 +327,7 @@ public class OptionActivity extends Activity {
                 }
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
+
         return 20;}
 }

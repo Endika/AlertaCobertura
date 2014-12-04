@@ -32,6 +32,7 @@ public class Boot extends BroadcastReceiver {
                 }
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
     }
 
 }

@@ -144,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
                 estado=c.getString(0);
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
 
         TextView t = (TextView)findViewById(R.id.estado);
         ImageView i = (ImageView)findViewById(R.id.viewstate);

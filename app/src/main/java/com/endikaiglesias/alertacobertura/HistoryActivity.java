@@ -39,6 +39,7 @@ public class HistoryActivity extends ActionBarActivity {
                 else valores.add(getString(R.string.incomunicado)+" "+c.getString(1));
             } while(c.moveToNext());
         }
+        if(c != null)c.close();
 
         String[] values = new String[valores.size()];
 
@@ -71,6 +72,7 @@ public class HistoryActivity extends ActionBarActivity {
                         total++;
                     } while(c.moveToNext());
                 }
+                if(c != null)c.close();
 
                 //eliminamos todos menos el \u00faltimo
                 c = db.query("historial", campos, null, null, null, null,null,null);
@@ -110,10 +112,10 @@ public class HistoryActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.menu_cerrar:
+            /*case R.id.menu_cerrar:
                 //cierra todos los activitis anteriores ejecutando el principal mandandole un EXIT el cual ejecuta el proceso para cerrarse autom\u00e1ticamente
                 android.os.Process.killProcess(android.os.Process.myPid());
-                return true;
+                return true;*/
             case R.id.menu_about:
                 //Nuevo activity con info
                 Intent about = new Intent(this, AboutActivity.class );

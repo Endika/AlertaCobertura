@@ -14,10 +14,10 @@
         android:title="@string/menu_history"
         android:orderInCategory="100"
         app:showAsAction="never" />
-    <item android:id="@+id/menu_cerrar"
+    <!--<item android:id="@+id/menu_cerrar"
         android:title="@string/menu_cerrar"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        app:showAsAction="never" />-->
     <item android:id="@+id/menu_home"
         android:title="@string/menu_home"
         android:orderInCategory="100"

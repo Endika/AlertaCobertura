@@ -1,5 +1,6 @@
 package com.endikaiglesias.alertacobertura;
 
+import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -13,6 +14,7 @@ import android.media.MediaPlayer;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.telephony.PhoneStateListener;
@@ -141,7 +143,7 @@ public class Servicio extends Service{
                     .setContentIntent(contIntent)
                     .build();
 
-            //AutoCancel: cuando se pulsa la notificai\u00f3n \u00e9sta desaparece
+            //AutoCancel: cuando se pulsa la notificaión ésta desaparece
             noti.flags |= Notification.FLAG_AUTO_CANCEL;
 
             //Añadir sonido, vibración y luces
@@ -225,11 +227,13 @@ public class Servicio extends Service{
             if (c.moveToLast()){
                 estado=c.getString(0);
             }
+        } catch(Exception e) {
+            // Forzamos dos veces
+            if(c != null)c.close();
 
         } finally {
             // this gets called even if there is an exception somewhere above
-            if(c != null)
-                c.close();
+            if(c != null)c.close();
         }
 
         if(estado != null && estado.equals("conCobertura"))return 1;
